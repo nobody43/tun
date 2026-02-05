@@ -14,7 +14,7 @@ $ sudo systemctl enable goxray_cli@template1.service
 ```
 
 ## Installing AppArmor profile
-This allowes to run the binary only with required access, operationg on [MAC](https://en.wikipedia.org/wiki/Mandatory_access_control) principles. AppArmor protection is only active when executable is located at `@{exec_path}` paths. Written for latest Debian/Ubuntu.
+This allowes to run the binary only with required access, operating on [MAC](https://en.wikipedia.org/wiki/Mandatory_access_control) principles. AppArmor protection is only active when executable is located at `@{exec_path}` paths. Written for latest Debian/Ubuntu.
 ```sh
 $ sudo install -m 644 -o root -g root extras/etc/apparmor.d/goxray_cli /etc/apparmor.d/  # install AppArmor profile for executable
 $ sudo apparmor_parser --add /etc/apparmor.d/goxray_cli                                  # confine profile for executable
